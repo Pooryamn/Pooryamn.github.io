@@ -1,0 +1,341 @@
+/* CSS Document */
+html{
+	overflow-x: hidden;
+	
+}
+
+body{
+        background: #222831;
+    }
+    #intro-h1{
+        font-family: 'Roboto', sans-serif;
+        color: #FFFFFF;
+        font-size: 1300%;
+        font-weight: 300;
+    }
+    #intro-h2{
+        font-family: 'Roboto', sans-serif;
+        color: #FFFFFF;
+        font-size: 500%;
+        font-weight: 300;
+    }
+    
+    h2{
+        font-family: 'Roboto', sans-serif;
+        color: #FFFFFF;
+        font-size: 8vmin;
+        font-weight: 300;
+/*        line-height:0vh;*/
+    }
+    
+    h3{
+        font-family: 'Roboto', sans-serif;
+        color: #FFFFFF;
+        font-size: 3vmin;
+        line-height: 3vh;
+        font-weight: 300;
+    }
+    h4{
+        font-family: 'Roboto', sans-serif;
+        color: #FFFFFF;
+        font-size: 3vmin;
+        line-height: 3vh;
+        font-weight: 300;
+    }
+    p{
+        font-family: 'Roboto', sans-serif;
+        color: #FFFFFF;
+        font-size: 2vmin;
+        line-height: 2vh;
+        font-weight: 300;
+    }
+    li{
+        font-family: 'Roboto', sans-serif;
+        color: #FFFFFF;
+        font-size: 2vmin;
+        font-weight: 300;
+    }
+
+    
+    .background{
+        background: #222831;
+        width: 100%;
+        height: 100%;
+    }
+    #rain{
+        position:absolute;
+        height:425vh;
+        width:100%;
+        top:0px;
+        bottom:0px;
+		z-index: -1;
+		overflow: hidden
+    }
+
+	.loadingBar{
+		background-color: white;
+		height : 1vh;
+	}
+
+	#javaBar{
+		background-color: #00adb5;
+		height : 100%;
+		width: 10%;
+		
+	}
+
+	#pythonBar{
+			background-color: #00adb5;
+			height : 100%;
+			width: 10%;
+
+		}
+	#javascriptBar{
+		background-color: #00adb5;
+		height : 100%;
+		width: 10%;
+		
+	}
+	#cBar{
+		background-color: #00adb5;
+		height : 100%;
+		width: 10%;
+		
+	}
+	#htmlBar{
+		background-color: #00adb5;
+		height : 100%;
+		width: 10%;
+		
+	}
+	
+	#csharpBar{
+		background-color: #00adb5;
+		height : 100%;
+		width: 10%;
+		
+	}
+
+	#gitBar{
+		background-color: #00adb5;
+		height : 100%;
+		width: 10%;
+		
+	}
+
+	#sqlBar{
+			background-color: #00adb5;
+			height : 100%;
+			width: 10%;
+
+		}
+	#unixBar{
+		background-color: #00adb5;
+		height : 100%;
+		width: 10%;
+		
+	}
+	#nodeBar{
+		background-color: #00adb5;
+		height : 100%;
+		width: 10%;
+		
+	}
+	#dreamBar{
+		background-color: #00adb5;
+		height : 100%;
+		width: 10%;
+		
+	}
+	
+	#unityBar{
+		background-color: #00adb5;
+		height : 100%;
+		width: 10%;	
+	}   
+    
+    #introduction{
+        text-align:center;
+        margin-top: 0vmin;
+        animation-name: introFade;
+        animation-delay: 0.3s;
+        animation-duration: 2s;
+        animation-fill-mode: forwards;
+        animation-timing-function: ease-in;
+        opacity: 0;
+        
+    }
+    
+    #introduction-text2{
+        font-family: 'Roboto', sans-serif;
+        color: #FFFFFF;
+        font-size: 6.5vw;
+        font-weight: 300;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 0vmin;
+        max-width: 95%;
+    }
+    
+    @keyframes introFade{
+        from{opacity: 0}
+        to{opacity: 1}
+        
+    }
+    
+    .school-img{
+        width: auto;
+    }
+    .section-block{
+        margin-left: 10%;
+        margin-right: 10%;
+        background-color:rgba(57, 62, 70, 0.5);
+        padding:1%; 
+    }
+
+
+
+
+
+    
+    .drop-image{
+        background:linear-gradient(#393e46, #00adb5 );
+        width: 3px;
+        height: 75px;
+    }
+    
+    .dot {
+      height: 75%;
+      width: 75%;
+      background-color: #FFFFFF;
+      border-radius: 50%;
+    display: flex;justify-content: center;
+        
+    }
+    
+    #centre-dot{
+      height: 10px;
+      width: 10px;
+      background-color: #000000;
+      border-radius: 50%;
+        display: flex;justify-content: center;
+    }
+    
+    
+        
+     #minute-hand{
+         position:absolute;
+         height:19%;
+         width:1%;
+         background-color: #000;
+         transform-origin: bottom;
+         animation-name: rotateAni;
+         animation-duration: 1s;
+         animation-iteration-count: infinite;
+         animation-timing-function: linear;
+         
+            
+    }
+    
+    
+    #hour-hand{
+        position:absolute;
+        width:100%;
+        height:70%;
+        top:100%;
+         background-color: #000;
+         animation-name: rotateAni;
+         transform-origin: top;
+
+         animation-duration: 1.083333333333333333s;
+         animation-iteration-count: infinite;
+         animation-timing-function: linear;
+        animation-direction: reverse;
+            z-index: 1;
+    }
+    
+    @keyframes rotateAni{
+        0%{ 
+            transform: rotate(0deg);
+        }
+        25%{
+            transform: rotate(90deg);
+        }
+        50%{
+            transform: rotate(180deg);
+        }
+        75%{
+            transform: rotate(270deg);
+        }
+        100%{
+            transform: rotate(359deg);
+        }
+    }
+.section-image-cell {
+	width : 30vmin;
+	padding-left:1%;
+	padding-right:1.2%;
+}
+
+.section-image {
+	width:100%;
+	margin-right : 30%
+}
+
+.section-block-title {
+	
+}
+
+.section-block-title {
+	text-align: center;
+	font-size: 4vmin;
+}
+
+.center-flex {
+	display:flex;
+	justify-content: center;
+	align-items: center; 
+	align-content: center;
+}
+
+.section-courses-cell {
+	text-align : left;
+	line-height: 0.5vh;
+	vertical-align: top;
+}
+
+.buffer-block {
+	height:10vmin;
+}
+
+#introduction{
+    background-image: url("./../images/WP1.png");
+    background-repeat: no-repeat;
+    background-position: 50% 1%;
+    height: 90vh;
+    background-size: auto 90vh;
+    margin-bottom: 0vh;
+}
+
+
+.flex-container{
+    display: flex; 
+    flex-wrap: nowrap;
+    justify-content:space-around;
+    max-width: 80vw;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15vh;
+    }
+
+
+.menu-link{
+        font-family: 'Roboto', sans-serif;
+        font-size: 1.5vw;
+        color: #FFFFFF;
+        text-decoration: none;
+    }
+.menu-link:hover{
+    color: aqua;
+    text-decoration: underline aqua;
+}
