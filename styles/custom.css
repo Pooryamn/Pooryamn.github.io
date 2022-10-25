@@ -233,7 +233,7 @@ body {background-image: url(scribble_light.png);  background-position: inherit i
 #divLogo{margin-top: 48px; margin-bottom: 0px; text-align: left;}
 
 #divSiteTitle{
-	font-family: Monospace;
+	
 	font-size: 35px;
 	line-height: 40px;
 	color: rgb(2, 52, 117);
