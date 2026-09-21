@@ -57,7 +57,7 @@ $(document).ready(function () {
         if ($('#darkModeToggle').length > 0) return;
         var menuList = $('.ddmenu').first();
         if (!menuList.length) return;
-        menuList.append('<li><button type="button" id="darkModeToggle" class="btn btn-secondary">Dark Mode</button></li>');
+        menuList.append('<li><a href="#" id="darkModeToggle">Dark Mode</a></li>');
     }
 
     injectDarkModeToggle();
@@ -69,7 +69,8 @@ $(document).ready(function () {
     }
     setDarkMode(shouldUseDarkMode);
 
-    $(document).on('click', '#darkModeToggle', function () {
+    $(document).on('click', '#darkModeToggle', function (e) {
+        e.preventDefault();
         var enableDarkMode = !$('body').hasClass('dark-mode');
         setDarkMode(enableDarkMode);
         saveDarkModePreference(enableDarkMode);
