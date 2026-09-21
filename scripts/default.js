@@ -32,6 +32,49 @@ if (browser.chrome) {
 jQuery.browser = browser;
 
 $(document).ready(function () {
+    var darkModeStorageKey = 'pmn-dark-mode-enabled';
+
+    function setDarkMode(enabled) {
+        $('body').toggleClass('dark-mode', enabled);
+        $('#darkModeToggle').text(enabled ? 'Light Mode' : 'Dark Mode');
+    }
+
+    function getSavedDarkModePreference() {
+        try {
+            return localStorage.getItem(darkModeStorageKey);
+        } catch (e) {
+            return null;
+        }
+    }
+
+    function saveDarkModePreference(enabled) {
+        try {
+            localStorage.setItem(darkModeStorageKey, enabled ? 'true' : 'false');
+        } catch (e) {}
+    }
+
+    function injectDarkModeToggle() {
+        if ($('#darkModeToggle').length > 0) return;
+        var menuList = $('.ddmenu').first();
+        if (!menuList.length) return;
+        menuList.append('<li><button type="button" id="darkModeToggle" class="btn btn-secondary">Dark Mode</button></li>');
+    }
+
+    injectDarkModeToggle();
+
+    var savedPreference = getSavedDarkModePreference();
+    var shouldUseDarkMode = savedPreference === 'true';
+    if (savedPreference === null && window.matchMedia) {
+        shouldUseDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    }
+    setDarkMode(shouldUseDarkMode);
+
+    $(document).on('click', '#darkModeToggle', function () {
+        var enableDarkMode = !$('body').hasClass('dark-mode');
+        setDarkMode(enableDarkMode);
+        saveDarkModePreference(enableDarkMode);
+    });
+
     $('iframe').each(function () {/*fix youtube z-index*/
         var ifr_source = $(this).attr('src') || "";
         if (ifr_source.length > 0) {
@@ -76,4 +119,3 @@ $(document).ready(function () {
     });
 
 });
-

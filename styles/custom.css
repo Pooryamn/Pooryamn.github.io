@@ -561,3 +561,92 @@ h6,.page-content h6 a {font-weight: normal; font-style: normal; font-family: 'So
     .navbar .ddmenu {margin-top: 0px;margin-bottom: 0px;}
 
 }
+
+/* Dark mode */
+body.dark-mode {
+    background-image: none;
+    background-color: #121417;
+    color: #e5e7eb;
+}
+
+body.dark-mode .transparent-bg {
+    background-color: #1b1f24;
+}
+
+body.dark-mode .page-content,
+body.dark-mode .page-content lb,
+body.dark-mode p,
+body.dark-mode li,
+body.dark-mode strong,
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5,
+body.dark-mode h6 {
+    color: #e5e7eb !important;
+}
+
+body.dark-mode #divSiteTitle {color: #93c5fd;}
+body.dark-mode #divParagraph {color: #bfdbfe;}
+body.dark-mode #divTagLine {color: #cbd5e1;}
+
+body.dark-mode .navbar .nav-pills > li > a,
+body.dark-mode #CVButton,
+body.dark-mode #darkModeToggle {
+    color: #e5e7eb;
+    background-color: #2a313a;
+    border-color: #3a4450;
+}
+
+body.dark-mode .navbar .nav-pills > li > a:hover,
+body.dark-mode .navbar .nav-pills > .active > a,
+body.dark-mode .navbar .nav-pills > .active > a:hover,
+body.dark-mode #CVButton:hover,
+body.dark-mode #darkModeToggle:hover {
+    color: #ffffff;
+    background-color: #0ea5a5;
+}
+
+body.dark-mode .navbar .dropdown-menu,
+body.dark-mode .dropdown-menu {
+    background-color: #1f242b;
+    border-color: #374151;
+}
+
+body.dark-mode .navbar .dropdown-menu li > a,
+body.dark-mode .dropdown-menu li > a {
+    color: #e5e7eb;
+}
+
+body.dark-mode #divFooter {
+    background-color: #111827;
+    background-image: none;
+    color: #d1d5db;
+}
+
+body.dark-mode #divFooter a {color: #f59e0b;}
+
+body.dark-mode .sidebox {
+    background-color: #1f2937;
+    border-color: #374151;
+    color: #e5e7eb;
+}
+
+body.dark-mode .line-separator {
+    border-top-color: #4b5563;
+}
+
+body.dark-mode [style*="color: black"],
+body.dark-mode [style*="color:black"],
+body.dark-mode [style*="color: rgb(0, 0, 0)"] {
+    color: #e5e7eb !important;
+}
+
+body.dark-mode #darkModeToggle {
+    margin-left: 2px;
+    margin-right: 2px;
+    padding: 10px 20px;
+    border-radius: 0;
+    font-size: 15px;
+}
